@@ -83,11 +83,11 @@ Object.getOwnPropertyDescriptor 메서드는 하나의 프로퍼티에 대해 �
 
 ```javascript
 // 일반 객체의 __proto__는 접근자 프로퍼티다.
-Object.getOwnPropertyDescriptor(Object.prototype, "__proto__");
+Object.getOwnPropertyDescriptor(Object.prototype, '__proto__');
 // {get: f, set: f, enumerable: false, configurable: true}
 
 // 함수 객체의 prototype은 데이터 프로퍼티다.
-Object.getOwnPropertyDescriptor(function () {}, "prototype");
+Object.getOwnPropertyDescriptor(function () {}, 'prototype');
 // {value: {...}, writable; true, enumerable: false, configurable: false}
 ```
 
@@ -127,14 +127,17 @@ Object.defineProperties 메서드를 사용하면 여러 개의 프로퍼티를 
 - ### 객체 확장 금지
 
   Object.preventExtensions 메서드는 객체의 확장을 금지한다. 확장이 금지된 객체는 프로퍼티 추가가 금지된다.
+  확장이 가능한 객체인지 여부는 Object.isExtensible 메서드로 확인할 수 있다.
 
 - ### 객체 밀봉
 
   Object.seal 메서드는 객체를 밀봉한다. 프로퍼티 추가 및 삭제와 프로퍼티 어트리뷰트 재정의 금지를 의미, 밀봉된 객체는 읽기와 쓰기만 가능하다.
+  밀봉된 객체인지 여부는 Object.isSealed 메서드로 확인할 수 있다.
 
 - ### 객체 동결
 
   Object.freeze 메서드는 객체를 동결한다. 프로퍼티 추가 및 삭제와 프로퍼티 어트리뷰트 재정의 금지, 프로퍼티 값 갱신 금지를 의미, 동결된 객체는 읽기만 가능.
+  동결된 객체인지 여부는 Object.isFrozen 메서드로 확인할 수 있다.
 
 - ### 불변 객체
   지금까지 본 변경 방지 메서드들은 얕은 변경 방지로 직속 프로퍼티만 변경이 방지되고 중첩 객체까지는 영향을 주지 못한다.
