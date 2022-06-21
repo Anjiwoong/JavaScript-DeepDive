@@ -567,7 +567,7 @@ console.log(me instanceof Person); // true
 console.log(me instanceof Object); // true
 ```
 
-instanceof 연산자는 프로토타입의 constructor 프로퍼티가 가리키는 생서자 함수를 찾는 것이 아니라 생성자 함수의 prototype에 바인딩된 객체가 프로토타입 체인 상에 존재하는지 확인한다.
+instanceof 연산자는 프로토타입의 constructor 프로퍼티가 가리키는 생성자 함수를 찾는 것이 아니라 생성자 함수의 prototype에 바인딩된 객체가 프로토타입 체인 상에 존재하는지 확인한다.
 
 - 생성자 함수에 의해 프로토타입이 교체되어 constructor 프로퍼티와 생성자 함수 간의 연결이 파괴되어도 생성자 함수의 prototype 프로퍼티와 프로토타입 간의 연결은 파괴되지 않으므로 instanceof는 아무런 영향을 받지 않는다.
 
@@ -575,7 +575,7 @@ instanceof 연산자는 프로토타입의 constructor 프로퍼티가 가리키
 
 - ### Object.create에 의한 직접 상속
 
-  Object.create 메서드의 첫 번째 매개변수에는 생성할 객체의 프로토타입으로 지정할 객체를 전달한다. 두 번째 매개변수에는 생성할 객체의 프로퍼티 키와 프로퍼티 디스크립터 객체로 이뤄진 객체를 전달한다.
+Object.create 메서드의 첫 번째 매개변수에는 생성할 객체의 프로토타입으로 지정할 객체를 전달한다. 두 번째 매개변수에는 생성할 객체의 프로퍼티 키와 프로퍼티 디스크립터 객체로 이뤄진 객체를 전달한다.
 
 - 이 객체의 형식은 Object.defineProperties 메서드의 두 번째 인수와 동일하다.
 - 두 번째 인수는 옵션이므로 생략 가능하다.
