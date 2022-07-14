@@ -15,9 +15,9 @@ new 연산자와 함께 Object 생성자 함수를 호출하면 빈 객체를 �
 const person = new Object();
 
 // 프로퍼티 추가
-person.name = "An";
+person.name = 'An';
 person.sayHello = function () {
-  console.log("Hi! My name is " + this.name);
+  console.log('Hi! My name is ' + this.name);
 };
 
 console.log(person); // {name: 'An', sayHello: f}
@@ -151,3 +151,36 @@ console.log(circle); // Circle {radius: 1, getDiameter: f}
   - 메서드, 화살표 함수
 
 ECMAScript 사양에서 메서드로 인정하는 범위가 일반적인 의미의 메서드보다 좁다.
+
+# 함수와 일급 객체
+
+## 일급 객체
+
+- 무명의 리터럴로 생성할 수 있다. 즉, 런타임에 생성이 가능하다.
+- 변수나 자료구조에 저장할 수 있다.
+- 함수의 매개변수에 전달할 수 있다.
+- 함수의 반환값으로 사용할 수 있다.
+
+함수가 일급 객체라는 것은 함수를 객체와 동일하게 사용할 수 있다는 의미다.
+
+일급 객체로서 함수가 가지는 가장 큰 특징은 일반 객체와 같이 함수의 매개변수에 전달할 수 있으며, 함수의 반환값으로 사용할 수도 있다는 것이다. 이는 함수형 프로그래밍을 가능케 하는 자바스크립트의 장점 중 하나다.
+
+## 함수 객체의 프로퍼티
+
+함수는 객체다. 따라서 함수도 프로퍼티를 가질 수 있다. 브라우저 콘솔에서 console.dir 메서드를 사용하여 함수 객체의 내부를 들여다 보자.
+
+![함수 객체의 프로퍼티](javascript/images/function_property.png)
+
+arguments, caller, length, name, prototype 프로퍼티는 모두 함수 객체의 데이터 프로퍼티다.
+이들 프로퍼티는 일반 객체에는 없는 함수 객체 고유의 프로퍼티다.
+
+- ### arguments 프로퍼티
+
+  함수 객체의 arguments 프로퍼티 값은 arguments 객체다. arguments 객체는 함수 호출 시 전달한 인수들의 정보를 담고 있는 순회 가능한 유사 배열 객체이며, 함수 내부에서 지역 변수처럼 사용된다. 즉, 함수 외부에서는 참조할 수 없다.
+
+- arguments 객체는 매개변수 개수를 확정할 수 없는 가변 인자 함수를 구현할 때 유용하다.
+
+유사 배열 객체는 배열이 아니므로 배열 메서드를 사용할 경우 에러가 발생한다.
+
+- ### caller 프로퍼티
+  caller 프로퍼티 ECMAScript 사양에 포함되지 않은 비표준 프로퍼티다.
