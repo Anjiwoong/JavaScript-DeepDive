@@ -4,8 +4,9 @@
 
 javascript
 
-|    12장     |                               [함수](https://github.com/Anjiwoong/TIL/blob/main/javascript/JavaScript02.md)                               |
+| chapter | subject |
 | :---------: | :---------------------------------------------------------------------------------------------------------------------------------------: |
+|    12장     |                               [함수](https://github.com/Anjiwoong/TIL/blob/main/javascript/JavaScript02.md)                               |
 | 13장 ~ 15장 | [스코프, 전역 변수의 문제점, let, const 키워드와 블록 레벨 스코프](https://github.com/Anjiwoong/TIL/blob/main/javascript/JavaScript03.md) |
 |    16장     |                       [프로퍼티 어트리뷰트](https://github.com/Anjiwoong/TIL/blob/main/javascript/JavaScript04.md)                        |
 | 17장 ~ 18장 |          [생성자 함수에 의한 객체 생성, 함수와 일급 객체](https://github.com/Anjiwoong/TIL/blob/main/javascript/JavaScript05.md)          |
